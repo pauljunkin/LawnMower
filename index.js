@@ -14,7 +14,7 @@ var PORT = 3000;
 var _DATA = dataUtil.loadData().calendar;
 
 /// MIDDLEWARE 
-app.use(logger('dev'));
+app.use(logger('dev')); 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.engine('handlebars', exphbs({ defaultLayout: 'main', partialsDir: "views/partials/" }));
@@ -122,6 +122,6 @@ app.get('/tag/:tag', function(req, res) {
 });
 
 // Start listening on port PORT
-app.listen(PORT, function() {
-    console.log('Server listening on port:', PORT);
+app.listen(process.env.PORT || 3000, function() {
+    console.log('Listening!');
 });
