@@ -1,0 +1,33 @@
+ <p>Enter Date: <input type = "text" id = "datepicker-13"></p>
+ <button id = "availabilty">Check Availability</button>
+ <table style="width:100%" id = "table">
+   {{#if date}}
+    <caption id = "checkDate">{{date}}</caption>
+    {{else}}
+    <caption id = "checkDate">Date</caption>
+    {{/if}}
+  <tr>
+    <th>8am</th>
+    <th>9am</th>
+    <th>10am</th>
+    <th>11am</th>
+    <th>12pm</th>
+    <th>1pm</th>
+    <th>2pm</th>
+    <th>3pm</th>
+    <th>4pm</th>
+    <th>5pm</th>
+  </tr>
+  <tr>
+    {{#each times}}
+    {{#if this}}
+    <td id = "taken">Taken</td>
+    {{else}}
+    <td id = "open">Open</td>
+    {{/if}}
+    {{/each}}
+  </tr>
+</table>
+<button id = "clearDate">Clear Date</button>
+<div id = "chosenDay">
+</div>

@@ -1,0 +1,14 @@
+{
+    "people" : [
+        {
+            "firstName" : "Paul",
+            "lastName" : "Junkin",
+            "address" : "308 Jodyway",
+            "city" : "Timonium",
+            "zipCode" : "21093",
+            "specialRequests" : "Lets GO",
+            "date" : "05-15-2020",
+            "time" : "12pm"
+        }
+    ]
+}
